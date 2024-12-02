@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Styling Css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- swiper link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <title>Gro Cart</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="nav-info">
+                <div class="nav-logo-location">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="https://placehold.co/40x40.png" alt="logo" />
+                            جروكارت
+                        </a>
+                    </div>
+                    <div class="location">
+                        <select name="place" id="place">
+                            <option value="place-1">المنصورة, توريل</option>
+                            <option value="place-2">قناه السويس</option>
+                            <option value="place-3">المحافظة</option>
+                        </select>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="search" name="search" id="search" placeholder="ابحث عن اسم المنتج" />
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <div class="user-info">
+                    <div class="user-img">
+                        <img src="https://placehold.co/50x50.png" alt="user" />
+                    </div>
+                    <div class="user-about">
+                        <h3>أهلا محمد</h3>
+                        <p>حساب شخصي</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Responsive -->
+            <div class="nav-infoR">
+                <div class="cart">
+                    <div class="cart-btn">
+                        <button><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+                <div class="location">
+                    <select name="place" id="placeR">
+                        <option value="place-1">المنصورة, توريل</option>
+                        <option value="place-2">قناه السويس</option>
+                        <option value="place-3">المحافظة</option>
+                    </select>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </div>
+            <div class="searchR mt-3">
+                <input type="search" name="search" id="searchR" placeholder="ابحث عن اسم المنتج" />
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <!-- Responsive -->
+        </div>
+    </div>
+    <div class="section-navigator ">
+        <img src="img/navimg.jpg" class="img-nav reverse" alt="">
+        <div class="container d-flex flex-wrap">
+            <a href="#"> الصفحة الرئيسيية <span> > </span> </a>
+            <a href="#" class="section-navigator-active"> سلة التسوق</a>
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------- -->
+    <div class="cart container">
+
+        <h2 class="text-center display-4 p-3 fw-bold"> معلومات الدفع </h2>
+        <div class="row py-4">
+
+            <div class="col-12 col-lg-8 my-2">
+                <div class="billing-form-wrapper">
+                    <h2>معلومات الدفع </h2>
+                    <form id="cash-form">
+                        <div class="billing-row">
+                            <div class="billing-field">
+                                <label for="first-name">الاسم الاول</label>
+                                <input type="text" id="first-name" placeholder="ادخل الاسم الاول ">
+                            </div>
+                            <div class="billing-field">
+                                <label for="last-name">اسم العائلة</label>
+                                <input type="text" id="last-name" placeholder="ادخل اسم العائلة">
+                            </div>
+                            <div class="billing-field">
+                                <label for="company-name">اسم المؤسسة<span>(اختيارى)</span></label>
+                                <input type="text" id="company-name" placeholder="اسم المؤسسة">
+                            </div>
+                        </div>
+
+                        <div class="billing-row">
+                            <div class="billing-field billing-full-width">
+                                <label for="street-address">الشارع</label>
+                                <input type="text" id="street-address" placeholder="الشارع">
+                            </div>
+                        </div>
+
+                        <div class="billing-row">
+                            <div class="billing-field">
+                                <label for="country"> المدينة</label>
+                                <select id="country">
+                                    <option value="" disabled selected>اختر المنطقة</option>
+                                    <option value="المنصورة">المنصورة</option>
+                                    <option value="طنطا">طنطا</option>
+                                    <option value="ميت غمر"> ميت غمر</option>
+                                </select>
+                            </div>
+                            <div class="billing-field">
+                                <label for="country"> المحافظة</label>
+                                <select id="country">
+                                    <option value="" disabled selected>اختر المحافظة</option>
+                                    <option value="الدقهلية">الدقهلية</option>
+                                    <option value="القاهرة">القاهرة</option>
+
+                                </select>
+                            </div>
+                            <div class="billing-field">
+                                <label for="zip-code">كود المنطقة</label>
+                                <input type="text" id="zip-code" placeholder="كود المنطقة">
+                            </div>
+                        </div>
+
+                        <div class="billing-row">
+                            <div class="billing-field">
+                                <label for="email">البريد الاكترونى </label>
+                                <input type="email" id="email" placeholder="البريد الاكترونى ">
+                            </div>
+                            <div class="billing-field">
+                                <label for="phone">رقم الهاتف</label>
+                                <input dir="rtl" type="tel" id="phone" placeholder="رقم الهاتف">
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <form id="card-form" style="display: none;">
+                        <div class="form-group">
+                            <label for="card-number">رقم البطاقه </label>
+                            <input type="text" id="card-number" placeholder="ادخل رقم البطاقه" maxlength="19">
+                        </div>
+                        <div class="form-group-inline">
+                            <div class="billing-field">
+                                <label for="expiration-date">Expiration Date</label>
+                                <input type="text" id="expiration-date" placeholder="MM/YY">
+                            </div>
+                            <div class="billing-field">
+                                <label for="ccv">CCV</label>
+                                <input type="text" id="ccv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                        <div class="form-footer">
+                            <label class="py-3">
+                                <input type="checkbox"> حفظ بينات البطاقة
+                            </label>
+                        </div>
+                        <div class="icons">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                                alt="MasterCard">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 my-2">
+                <div class="cart-total ">
+                    <h6 class="pb-3 text-center  fs-4">ملخص الفاتوره</h6>
+                    <div class="container">
+                        <div class="px-2">
+                            <div class="summary d-flex align-items-center justify-content-between my-2">
+                                <div class="d-flex align-items-center summary-item ">
+                                    <img src="img/11473559.png" alt="">
+                                    اسم المنتج <span> x1 </span>
+                                </div>
+                                <span> 45.00 جنيه</span>
+                            </div>
+                            <div class="summary d-flex align-items-center justify-content-between my-2">
+                                <div class="d-flex align-items-center summary-item ">
+                                    <img src="img/11473559.png" alt="">
+                                    اسم المنتج <span>x1</span>
+                                </div>
+                                <span> 45.00 جنيه</span>
+                            </div>
+
+                        </div>
+                        <div class="subtotal d-flex align-items-center justify-content-between ">
+                            مجموع الطلب :
+                            <span> 45.00 جنيه</span>
+                        </div>
+                        <div class="shpping d-flex align-items-center justify-content-between ">
+                            التوصيل :
+                            <span> مجانى </span>
+                        </div>
+                        <div class="total d-flex align-items-center justify-content-between ">
+                            المجموع الكلى :
+                            <span> 45.00 جنيه</span>
+                        </div>
+                        <div class="payment-way d-flex align-items-start flex-column ">
+                            <span class="d-flex align-items-center py-1"><input type="radio" class="radio-color" checked
+                                    id="cash" name="pay" value="الدفع عند التوصيل">
+                                <label class="px-2" for="html">الدفع عتد التوصيل </label><br></span>
+                            <span class="d-flex align-items-center py-1"> <input type="radio" class="radio-color"
+                                    id="card" name="pay" value="بستخدام البطاقه">
+                                <label class="px-2" for="css">بستخدام البطاقه</label><br></span>
+                            <span class="d-flex align-items-center py-1"><input type="radio" class="radio-color"
+                                    id="instapay" name="pay" value="انستاباى">
+                                <label class="px-2" for="instapay">أنستاباى</label></span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="#" class="checkout-btn"> تاكيد الطلب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Footer -->
+    <div class="footer  ">
+        <div class=" ">
+            <div class="footR">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://placehold.co/40x40.png" alt="logo" />
+                        جروكارت
+                    </a>
+                </div>
+            </div>
+            <div class="foot-wrap">
+                <div class="info">
+                    <h4>معلومات</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> معلومات عنا</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-angles-left"></i> اتصل بنا</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> الشحن و الإرجاع</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> التعليمات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> سياسة الخصوصيه</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> شروط الاستخدام</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h4>بحاجه الي مساعده</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> 12345678910+</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> 12345678910+</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> callus@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h4>معلومات</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> معلومات عنا</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-angles-left"></i> اتصل بنا</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> الشحن و الإرجاع</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> التعليمات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> سياسة الخصوصيه</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> شروط الاستخدام</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h4>عميل</h4>
+                    <ul>
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-angles-left"></i> حسابي</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-angles-left"></i> الطلبات</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> طلبات العوده</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> منصه الرغبات</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h4>بحاجه الي مساعده</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> 12345678910+</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> 12345678910+</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-angles-left"></i> callus@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search text-center mt-3">
+                <button type="submit">اشترك</button>
+                <input type="email" name="footerEmail" id="footEmail" placeholder="ادخل الإيميل الخاص بك" />
+            </div>
+            <!-- <div class="end-footer text-center mt-3">
+<p>جميع الحقوق محفوظه فرق عمل EgyTigers</p>
+</div> -->
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
